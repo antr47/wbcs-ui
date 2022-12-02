@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Topbar from "../components/Topbar";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
 import Footer from "../components/Footer";
-import Services from "../components/Services";
+
 class DefaultLayout extends Component {
   constructor(props) {
     super(props);

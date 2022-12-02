@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 class Topbar extends Component {
   constructor(props) {
     super(props);
@@ -11,37 +12,37 @@ class Topbar extends Component {
 
   render() {
     return (
-      <div class="container-fluid py-2 border-bottom d-none d-lg-block">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
-              <div class="d-inline-flex align-items-center">
-                <a class="text-decoration-none text-body pe-3" href="">
-                  <i class="bi bi-telephone me-2"></i>+012 345 6789
-                </a>
-                <span class="text-body">|</span>
-                <a class="text-decoration-none text-body px-3" href="">
-                  <i class="bi bi-envelope me-2"></i>info@example.com
-                </a>
+      <div className="container-fluid py-2 border-bottom d-none d-lg-block">
+        <div className="container">
+          <div className="row">
+            <div className="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
+              <div className="d-inline-flex align-items-center">
+                <Link className="text-decoration-none text-body pe-3" href="">
+                  <i className="bi bi-telephone me-2"></i>+012 345 6789
+                </Link>
+                <span className="text-body">|</span>
+                <Link className="text-decoration-none text-body px-3" href="">
+                  <i className="bi bi-envelope me-2"></i>info@example.com
+                </Link>
               </div>
             </div>
-            <div class="col-md-6 text-center text-lg-end">
-              <div class="d-inline-flex align-items-center">
-                <a class="text-body px-2" href="">
-                  <i class="fab fa-facebook-f"></i>
-                </a>
-                <a class="text-body px-2" href="">
-                  <i class="fab fa-twitter"></i>
-                </a>
-                <a class="text-body px-2" href="">
-                  <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a class="text-body px-2" href="">
-                  <i class="fab fa-instagram"></i>
-                </a>
-                <a class="text-body ps-2" href="">
-                  <i class="fab fa-youtube"></i>
-                </a>
+            <div className="col-md-6 text-center text-lg-end">
+              <div className="d-inline-flex align-items-center">
+                <Link className="text-body px-2" href="">
+                  <i className="fab fa-facebook-f"></i>
+                </Link>
+                <Link className="text-body px-2" href="">
+                  <i className="fab fa-twitter"></i>
+                </Link>
+                <Link className="text-body px-2" href="">
+                  <i className="fab fa-linkedin-in"></i>
+                </Link>
+                <Link className="text-body px-2" href="">
+                  <i className="fab fa-instagram"></i>
+                </Link>
+                <Link className="text-body ps-2" href="">
+                  <i className="fab fa-youtube"></i>
+                </Link>
               </div>
             </div>
           </div>

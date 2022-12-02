@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 class Footer extends Component {
   constructor(props) {
     super(props);
@@ -12,130 +12,132 @@ class Footer extends Component {
 
   render() {
     return (
-      <div className="footer-wrap">
-        <div class="container-fluid bg-dark text-light mt-5 py-5">
-          <div class="container py-5">
-            <div class="row g-5">
-              <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+      <div classNameName="footer-wrap">
+        <div className="container-fluid bg-dark text-light mt-5 py-5">
+          <div className="container py-5">
+            <div className="row g-5">
+              <div className="col-lg-3 col-md-6">
+                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Get In Touch
                 </h4>
-               
-                <p class="mb-2">
-                  <i class="fa fa-map-marker-alt text-primary me-3"></i>140 Le
-                  Trong Tan, Tay Thanh, Tan Phu District, HCMC
+
+                <p className="mb-2">
+                  <i className="fa fa-map-marker-alt text-primary me-3"></i>140
+                  Le Trong Tan, Tay Thanh, Tan Phu District, HCMC
                 </p>
-                <p class="mb-2">
-                  <i class="fa fa-envelope text-primary me-3"></i>
+                <p className="mb-2">
+                  <i className="fa fa-envelope text-primary me-3"></i>
                   infor@hufi.edu.vn
                 </p>
-                <p class="mb-0">
-                  <i class="fa fa-phone-alt text-primary me-3"></i>+012 345
+                <p className="mb-0">
+                  <i className="fa fa-phone-alt text-primary me-3"></i>+012 345
                   67890
                 </p>
               </div>
-              <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+              <div className="col-lg-3 col-md-6">
+                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Quick Links
                 </h4>
-                <div class="d-flex flex-column justify-content-start">
-                  <a class="text-light mb-2" href="#">
-                    <i class="fa fa-angle-right me-2"></i>Home
-                  </a>
-                  <a class="text-light mb-2" href="#">
-                    <i class="fa fa-angle-right me-2"></i>About Us
-                  </a>
-                  <a class="text-light mb-2" href="#">
-                    <i class="fa fa-angle-right me-2"></i>Our Services
-                  </a>
-                  <a class="text-light" href="#">
-                    <i class="fa fa-angle-right me-2"></i>Contact Us
-                  </a>
+                <div className="d-flex flex-column justify-content-start">
+                  <Link className="text-light mb-2" to="">
+                    <i className="fa fa-angle-right me-2"></i>Home
+                  </Link>
+                  <Link className="text-light mb-2" to="">
+                    <i className="fa fa-angle-right me-2"></i>About Us
+                  </Link>
+                  <Link className="text-light mb-2" to="">
+                    <i className="fa fa-angle-right me-2"></i>Our Services
+                  </Link>
+                  <Link className="text-light" to="">
+                    <i className="fa fa-angle-right me-2"></i>Contact Us
+                  </Link>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+              <div className="col-lg-3 col-md-6">
+                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Popular Links
                 </h4>
-                <div class="d-flex flex-column justify-content-start">
-                  <a class="text-light mb-2" href="#">
-                    <i class="fa fa-angle-right me-2"></i>Home
-                  </a>
-                  <a class="text-light mb-2" href="#">
-                    <i class="fa fa-angle-right me-2"></i>About Us
-                  </a>
-                  <a class="text-light mb-2" href="#">
-                    <i class="fa fa-angle-right me-2"></i>Our Services
-                  </a>
+                <div className="d-flex flex-column justify-content-start">
+                  <Link className="text-light mb-2" to="">
+                    <i className="fa fa-angle-right me-2"></i>Home
+                  </Link>
+                  <Link className="text-light mb-2" to="">
+                    <i className="fa fa-angle-right me-2"></i>About Us
+                  </Link>
+                  <Link className="text-light mb-2" to="">
+                    <i className="fa fa-angle-right me-2"></i>Our Services
+                  </Link>
 
-                  <a class="text-light" href="#">
-                    <i class="fa fa-angle-right me-2"></i>Contact Us
-                  </a>
+                  <Link className="text-light" to="">
+                    <i className="fa fa-angle-right me-2"></i>Contact Us
+                  </Link>
                 </div>
               </div>
-              <div class="col-lg-3 col-md-6">
-                <h4 class="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
+              <div className="col-lg-3 col-md-6">
+                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Newsletter
                 </h4>
                 <form action="">
-                  <div class="input-group">
+                  <div className="input-group">
                     <input
                       type="text"
-                      class="form-control p-3 border-0"
+                      className="form-control p-3 border-0"
                       placeholder="Your Email Address"
                     />
-                    <button class="btn btn-primary">Sign Up</button>
+                    <button className="btn btn-primary">Sign Up</button>
                   </div>
                 </form>
-                <h6 class="text-primary text-uppercase mt-4 mb-3">Follow Us</h6>
-                <div class="d-flex">
-                  <a
-                    class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
-                    href="#"
+                <h6 className="text-primary text-uppercase mt-4 mb-3">
+                  Follow Us
+                </h6>
+                <div className="d-flex">
+                  <Link
+                    className="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
+                    to=""
                   >
-                    <i class="fab fa-twitter"></i>
-                  </a>
-                  <a
-                    class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
-                    href="#"
+                    <i className="fab fa-twitter"></i>
+                  </Link>
+                  <Link
+                    className="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
+                    to=""
                   >
-                    <i class="fab fa-facebook-f"></i>
-                  </a>
-                  <a
-                    class="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
-                    href="#"
+                    <i className="fab fa-facebook-f"></i>
+                  </Link>
+                  <Link
+                    className="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
+                    to=""
                   >
-                    <i class="fab fa-linkedin-in"></i>
-                  </a>
-                  <a
-                    class="btn btn-lg btn-primary btn-lg-square rounded-circle"
-                    href="#"
+                    <i className="fab fa-linkedin-in"></i>
+                  </Link>
+                  <Link
+                    className="btn btn-lg btn-primary btn-lg-square rounded-circle"
+                    to=""
                   >
-                    <i class="fab fa-instagram"></i>
-                  </a>
+                    <i className="fab fa-instagram"></i>
+                  </Link>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="container-fluid bg-dark text-light border-top border-secondary py-4">
-          <div class="container">
-            <div class="row g-5">
-              <div class="col-md-6 text-center text-md-start">
-                <p class="mb-md-0">
+        <div className="container-fluid bg-dark text-light border-top border-secondary py-4">
+          <div className="container">
+            <div className="row g-5">
+              <div className="col-md-6 text-center text-md-start">
+                <p className="mb-md-0">
                   &copy;{" "}
-                  <a class="text-primary" href="#">
+                  <Link className="text-primary" to="">
                     MEDINOVA
-                  </a>
+                  </Link>
                   . All Rights Reserved.
                 </p>
               </div>
-              <div class="col-md-6 text-center text-md-end">
-                <p class="mb-0">
+              <div className="col-md-6 text-center text-md-end">
+                <p className="mb-0">
                   Designed by{" "}
-                  <a class="text-primary" href="">
+                  <Link className="text-primary" to="">
                     MEDINOVA Group
-                  </a>
+                  </Link>
                 </p>
               </div>
             </div>
