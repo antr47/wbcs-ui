@@ -17,7 +17,9 @@ class Home extends Component {
       isSelectedImage: false,
     };
   }
-  componentDidMount() {}
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   getBase64 = (file) => {
     return new Promise((resolve, reject) => {

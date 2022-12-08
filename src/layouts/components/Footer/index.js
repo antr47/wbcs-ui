@@ -4,8 +4,7 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    // if we are using arrow function binding is not required
-    //  this.onImageChange = this.onImageChange.bind(this);
+    
   }
 
   componentDidMount() {}
@@ -30,8 +29,8 @@ class Footer extends Component {
                   infor@hufi.edu.vn
                 </p>
                 <p className="mb-0">
-                  <i className="fa fa-phone-alt text-primary me-3"></i>+012 345
-                  67890
+                  <i className="fa fa-phone-alt text-primary me-3"></i>0283 8163
+                  318
                 </p>
               </div>
               <div className="col-lg-3 col-md-6">
@@ -39,16 +38,16 @@ class Footer extends Component {
                   Quick Links
                 </h4>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link className="text-light mb-2" to="">
+                  <Link className="text-light mb-2" to="/">
                     <i className="fa fa-angle-right me-2"></i>Home
                   </Link>
-                  <Link className="text-light mb-2" to="">
+                  <Link className="text-light mb-2" to="/about">
                     <i className="fa fa-angle-right me-2"></i>About Us
                   </Link>
-                  <Link className="text-light mb-2" to="">
+                  <Link className="text-light mb-2" to="/services">
                     <i className="fa fa-angle-right me-2"></i>Our Services
                   </Link>
-                  <Link className="text-light" to="">
+                  <Link className="text-light" to="/contact">
                     <i className="fa fa-angle-right me-2"></i>Contact Us
                   </Link>
                 </div>
@@ -58,17 +57,17 @@ class Footer extends Component {
                   Popular Links
                 </h4>
                 <div className="d-flex flex-column justify-content-start">
-                  <Link className="text-light mb-2" to="">
+                  <Link className="text-light mb-2" to="/">
                     <i className="fa fa-angle-right me-2"></i>Home
                   </Link>
-                  <Link className="text-light mb-2" to="">
+                  <Link className="text-light mb-2" to="/about">
                     <i className="fa fa-angle-right me-2"></i>About Us
                   </Link>
-                  <Link className="text-light mb-2" to="">
+                  <Link className="text-light mb-2" to="/services">
                     <i className="fa fa-angle-right me-2"></i>Our Services
                   </Link>
 
-                  <Link className="text-light" to="">
+                  <Link className="text-light" to="/contact">
                     <i className="fa fa-angle-right me-2"></i>Contact Us
                   </Link>
                 </div>

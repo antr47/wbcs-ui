@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
-import Home from "../../../pages/Home";
-import Contact from "../../../pages/Contact";
 class Navbar extends Component {
   constructor(props) {
     super(props);

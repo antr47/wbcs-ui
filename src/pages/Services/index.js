@@ -1,11 +1,13 @@
 import React, { Component } from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 class Service extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-  componentDidMount() {}
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
     return (

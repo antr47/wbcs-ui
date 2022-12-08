@@ -7,7 +7,9 @@ class About extends Component {
     //  this.onImageChange = this.onImageChange.bind(this);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
     return (

@@ -7,7 +7,9 @@ class Contact extends Component {
     //  this.onImageChange = this.onImageChange.bind(this);
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
 
   render() {
     return (
@@ -41,7 +43,9 @@ class Contact extends Component {
                     style={{ transform: "rotate(15deg)" }}
                   ></i>
                 </div>
-                <h6 className="mb-0">123 Street, New York, USA</h6>
+                <h6 className="mb-0">
+                  140 Le Trong Tan, Tay Thanh Ward, Tan Phu District, HCMC
+                </h6>
               </div>
             </div>
             <div className="col-lg-4">
@@ -62,7 +66,7 @@ class Contact extends Component {
                     style={{ transform: "rotate(15deg)" }}
                   ></i>
                 </div>
-                <h6 className="mb-0">+012 345 6789</h6>
+                <h6 className="mb-0">0283 8163 318</h6>
               </div>
             </div>
             <div className="col-lg-4">
@@ -83,7 +87,7 @@ class Contact extends Component {
                     style={{ transform: "rotate(15deg)" }}
                   ></i>
                 </div>
-                <h6 className="mb-0">info@example.com</h6>
+                <h6 className="mb-0">infor@hufi.edu.vn</h6>
               </div>
             </div>
           </div>
