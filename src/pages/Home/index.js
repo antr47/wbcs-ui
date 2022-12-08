@@ -237,7 +237,7 @@ class Home extends Component {
               />
               <label
                 htmlFor="loadImg"
-                className="btn btn-outline-primary rounded-pill py-3 px-5"
+                className="btn btn-outline-primary rounded-pill py-3 my-2 px-5"
               >
                 Select Image
               </label>
@@ -245,8 +245,8 @@ class Home extends Component {
               <button
                 className={
                   this.state.isSelectedImage === true
-                    ? "btn btn-primary rounded-pill py-3 px-5 mx-3 detect-button"
-                    : "btn btn-primary rounded-pill py-3 px-5 mx-3 detect-button d-none"
+                    ? "btn btn-primary rounded-pill py-3 px-5 my-2 mx-3 detect-button"
+                    : "btn btn-primary rounded-pill py-3 px-5 my-2 mx-3 detect-button d-none"
                 }
                 onClick={() => this.sendData()}
               >
@@ -256,15 +256,15 @@ class Home extends Component {
                 className={
                   this.state.isLoading === true ||
                   this.state.haveResult === false
-                    ? "btn btn-primary rounded-pill py-3 px-5 d-none"
-                    : "btn btn-primary rounded-pill py-3 px-5"
+                    ? "btn btn-primary rounded-pill my-2 py-3 px-5 d-none"
+                    : "btn btn-primary rounded-pill my-2 py-3 px-5"
                 }
                 onClick={() => this.toggle()}
               >
                 More Details
               </button>
             </div>
-            <div className="col-12 d-flex mt-5">
+            <div className="col-12 d-flex mt-5 image-header">
               {" "}
               <div className="col-6">
                 {" "}

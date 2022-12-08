@@ -97,6 +97,8 @@
         width: 100%;
         left: 0;
     }
+    
+    
 }
 
 @media (max-width: 991.98px) {
@@ -104,6 +106,15 @@
         margin-left: 0;
         padding: 10px 0;
     }
+    .image-header{
+        display: none !important;
+       }
+    
+    .display-container{
+        display: flex;
+        flex-direction: column;
+    } 
+    
 }
 
 .hero-header {
@@ -192,6 +203,7 @@
     .team-item .row {
         height: 350px;
     }
+   
 }
 
 .team-carousel .owl-nav {

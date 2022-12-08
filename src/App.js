@@ -15,24 +15,22 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-       
-          <Routes>
-            {publicRoutes.map((route, index) => {
-              const Page = route.component;
-              return (
-                <Route
-                  key={index}
-                  path={route.path}
-                  element={
-                    <DefaultLayout>
-                      <Page />
-                    </DefaultLayout>
-                  }
-                />
-              );
-            })}
-          </Routes>
-    
+        <Routes>
+          {publicRoutes.map((route, index) => {
+            const Page = route.component;
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                element={
+                  <DefaultLayout>
+                    <Page />
+                  </DefaultLayout>
+                }
+              />
+            );
+          })}
+        </Routes>
       </BrowserRouter>
     );
   }
