@@ -4,7 +4,6 @@ class Footer extends Component {
   constructor(props) {
     super(props);
     this.state = {};
-    
   }
 
   componentDidMount() {}
@@ -14,7 +13,7 @@ class Footer extends Component {
       <div classNameName="footer-wrap">
         <div className="container-fluid bg-dark text-light mt-5 py-5">
           <div className="container py-5">
-            <div className="row g-5">
+            <div className="row g-5 d-flex justify-content-between">
               <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Get In Touch
@@ -33,7 +32,7 @@ class Footer extends Component {
                   318
                 </p>
               </div>
-              <div className="col-lg-3 col-md-6">
+              {/* <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Quick Links
                 </h4>
@@ -51,7 +50,7 @@ class Footer extends Component {
                     <i className="fa fa-angle-right me-2"></i>Contact Us
                   </Link>
                 </div>
-              </div>
+              </div> */}
               <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Popular Links
@@ -63,10 +62,6 @@ class Footer extends Component {
                   <Link className="text-light mb-2" to="/about">
                     <i className="fa fa-angle-right me-2"></i>About Us
                   </Link>
-                  <Link className="text-light mb-2" to="/services">
-                    <i className="fa fa-angle-right me-2"></i>Our Services
-                  </Link>
-
                   <Link className="text-light" to="/contact">
                     <i className="fa fa-angle-right me-2"></i>Contact Us
                   </Link>
@@ -102,12 +97,7 @@ class Footer extends Component {
                   >
                     <i className="fab fa-facebook-f"></i>
                   </Link>
-                  <Link
-                    className="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
-                    to=""
-                  >
-                    <i className="fab fa-linkedin-in"></i>
-                  </Link>
+
                   <Link
                     className="btn btn-lg btn-primary btn-lg-square rounded-circle"
                     to=""
@@ -122,15 +112,7 @@ class Footer extends Component {
         <div className="container-fluid bg-dark text-light border-top border-secondary py-4">
           <div className="container">
             <div className="row g-5">
-              <div className="col-md-6 text-center text-md-start">
-                <p className="mb-md-0">
-                  &copy;{" "}
-                  <Link className="text-primary" to="">
-                    MEDINOVA
-                  </Link>
-                  . All Rights Reserved.
-                </p>
-              </div>
+              <div className="col-md-6 text-center text-md-start"></div>
               <div className="col-md-6 text-center text-md-end">
                 <p className="mb-0">
                   Designed by{" "}

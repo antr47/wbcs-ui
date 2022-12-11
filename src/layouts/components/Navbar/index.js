@@ -37,9 +37,6 @@ class Navbar extends Component {
                   About
                 </NavLink>
 
-                <NavLink exact to="/services" className="nav-item nav-link">
-                  Services
-                </NavLink>
                 <NavLink exact to="/contact" className="nav-item nav-link">
                   Contact
                 </NavLink>

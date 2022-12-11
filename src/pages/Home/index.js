@@ -293,7 +293,7 @@ class Home extends Component {
                     Your browser does not support the HTML5 canvas tag.
                   </canvas>
                 </div>
-                <div className="loading-spinner col-1">
+                <div className="loading-spinner my-3 col-1">
                   {this.state.isLoading && (
                     <div class="spinner-border text-info" role="status">
                       <span class="sr-only">Loading...</span>

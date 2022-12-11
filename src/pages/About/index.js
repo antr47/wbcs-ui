@@ -33,15 +33,7 @@ class About extends Component {
                   Best Medical Care For Yourself and Your Family
                 </h1>
               </div>
-              <p>
-                Tempor erat elitr at rebum at at clita aliquyam consetetur. Diam
-                dolor diam ipsum et, tempor voluptua sit consetetur sit.
-                Aliquyam diam amet diam et eos sadipscing labore. Clita erat
-                ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                clita duo justo et tempor consetetur takimata eirmod, dolores
-                takimata consetetur invidunt magna dolores aliquyam dolores
-                dolore. Amet erat amet et magna
-              </p>
+              
               <div class="row g-3 pt-3">
                 <div class="col-sm-3 col-6">
                   <div class="bg-light text-center rounded-circle py-4">
