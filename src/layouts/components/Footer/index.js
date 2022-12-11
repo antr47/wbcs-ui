@@ -21,7 +21,7 @@ class Footer extends Component {
 
                 <p className="mb-2">
                   <i className="fa fa-map-marker-alt text-primary me-3"></i>140
-                  Le Trong Tan, Tay Thanh, Tan Phu District, HCMC
+                  Le Trong Tan, Tay Thanh, Tan Phu, HCMC
                 </p>
                 <p className="mb-2">
                   <i className="fa fa-envelope text-primary me-3"></i>
@@ -32,25 +32,7 @@ class Footer extends Component {
                   318
                 </p>
               </div>
-              {/* <div className="col-lg-3 col-md-6">
-                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                  Quick Links
-                </h4>
-                <div className="d-flex flex-column justify-content-start">
-                  <Link className="text-light mb-2" to="/">
-                    <i className="fa fa-angle-right me-2"></i>Home
-                  </Link>
-                  <Link className="text-light mb-2" to="/about">
-                    <i className="fa fa-angle-right me-2"></i>About Us
-                  </Link>
-                  <Link className="text-light mb-2" to="/services">
-                    <i className="fa fa-angle-right me-2"></i>Our Services
-                  </Link>
-                  <Link className="text-light" to="/contact">
-                    <i className="fa fa-angle-right me-2"></i>Contact Us
-                  </Link>
-                </div>
-              </div> */}
+
               <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Popular Links

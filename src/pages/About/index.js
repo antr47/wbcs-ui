@@ -19,8 +19,9 @@ class About extends Component {
             <div class="col-lg-5 mb-5 mb-lg-0">
               <div class="position-relative h-100">
                 <img
-                  class="position-absolute w-100 h-100 rounded fit-cover"
+                  className="position-absolute w-100 h-100 rounded fit-cover"
                   src="assets/img/about.jpg"
+                  alt=""
                 />
               </div>
             </div>
@@ -33,7 +34,7 @@ class About extends Component {
                   Best Medical Care For Yourself and Your Family
                 </h1>
               </div>
-              
+
               <div class="row g-3 pt-3">
                 <div class="col-sm-3 col-6">
                   <div class="bg-light text-center rounded-circle py-4">

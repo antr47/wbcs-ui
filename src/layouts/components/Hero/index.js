@@ -18,7 +18,6 @@ class Hero extends Component {
             <div className="col-lg-8 text-center text-lg-start">
               <h5
                 className="d-inline-block text-primary text-uppercase border-bottom border-5"
-                // style="border-color: rgba(256, 256, 256, .3) !important;"
               >
                 Welcome To Medinova
               </h5>
