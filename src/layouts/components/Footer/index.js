@@ -10,7 +10,7 @@ class Footer extends Component {
 
   render() {
     return (
-      <div classNameName="footer-wrap">
+      <div className="footer-wrap">
         <div className="container-fluid bg-dark text-light mt-5 py-5">
           <div className="container py-5">
             <div className="row g-5 d-flex justify-content-between">

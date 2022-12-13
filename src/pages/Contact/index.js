@@ -13,7 +13,7 @@ class Contact extends Component {
 
   render() {
     return (
-      <div classNameName="container-fluid pt-5 mt-5">
+      <div className="container-fluid pt-5 mt-5">
         <div className="container">
           <div
             className="text-center mx-auto mb-5"

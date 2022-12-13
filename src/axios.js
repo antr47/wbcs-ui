@@ -23,7 +23,6 @@ const createError = (
 };
 
 export const isSuccessStatusCode = (s) => {
-  // May be string or number
   const statusType = typeof s;
   return (
     (statusType === "number" && s === 0) ||
@@ -33,7 +32,6 @@ export const isSuccessStatusCode = (s) => {
 
 instance.interceptors.response.use(
   (response) => {
-    // Thrown error for request with OK status code
     const { data } = response;
     if (
       data.hasOwnProperty("s") &&
@@ -51,11 +49,10 @@ instance.interceptors.response.use(
       );
     }
 
-    // Return direct data to callback
     if (data.hasOwnProperty("s") && data.hasOwnProperty("d")) {
       return data["d"];
     }
-    // Handle special case
+
     if (data.hasOwnProperty("s") && _.keys(data).length === 1) {
       return null;
     }

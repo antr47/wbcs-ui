@@ -13,31 +13,35 @@ class Navbar extends Component {
   render() {
     return (
       <div className="container-fluid sticky-top bg-white shadow-sm position-fixed">
-        <div class="container">
-          <nav class="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
-            <Link to={"/"} class="navbar-brand">
-              <h1 class="m-0 text-uppercase text-primary">
-                <i class="fa fa-clinic-medical me-2"></i>Medinova
+        <div className="container">
+          <nav className="navbar navbar-expand-lg bg-white navbar-light py-3 py-lg-0">
+            <Link to={"/"} exact="true" className="navbar-brand">
+              <h1 className="m-0 text-uppercase text-primary">
+                <i className="fa fa-clinic-medical me-2"></i>Medinova
               </h1>
             </Link>
             <button
-              class="navbar-toggler"
+              className="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarCollapse"
             >
-              <span class="navbar-toggler-icon"></span>
+              <span className="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <div class="navbar-nav ms-auto py-0">
-                <NavLink exact to="/" className="nav-item nav-link">
+            <div className="collapse navbar-collapse" id="navbarCollapse">
+              <div className="navbar-nav ms-auto py-0">
+                <NavLink exact="true" to="/" className="nav-item nav-link">
                   Home
                 </NavLink>
-                <NavLink exact to="/about" className="nav-item nav-link">
+                <NavLink exact="true" to="/about" className="nav-item nav-link">
                   About
                 </NavLink>
 
-                <NavLink exact to="/contact" className="nav-item nav-link">
+                <NavLink
+                  exact="true"
+                  to="/contact"
+                  className="nav-item nav-link"
+                >
                   Contact
                 </NavLink>
               </div>

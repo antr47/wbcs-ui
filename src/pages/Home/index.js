@@ -4,7 +4,8 @@ import ModalExample from "../../layouts/components/Modal";
 import Hero from "../../layouts/components/Hero";
 class Home extends Component {
   canvasRef = React.createRef();
-
+  resultCanvasRef = React.createRef();
+  imageRef = React.createRef();
   constructor(props) {
     super(props);
     this.state = {
@@ -15,6 +16,7 @@ class Home extends Component {
       isLoading: false,
       isShowModal: false,
       isSelectedImage: false,
+      iou: 0.8,
     };
   }
   componentDidMount() {
@@ -65,6 +67,11 @@ class Home extends Component {
   };
 
   sendData = async () => {
+    this.setState({
+      isSelectedImage: true,
+      haveResult: false,
+      result: {},
+    });
     try {
       let canvas = this.canvasRef.current;
       let image = await this.canvasToBlob(canvas);
@@ -82,7 +89,6 @@ class Home extends Component {
         this.setState({
           isLoading: false,
         });
-        console.log("Ok");
         let res_boxes = res.data.boxes;
         let res_classes = res.data.classes;
         let res_scores = res.data.scores;
@@ -128,7 +134,7 @@ class Home extends Component {
     let h = img.height;
 
     Array.from(scores).forEach((score, i) => {
-      if (score > 0.75) {
+      if (score > this.state.iou) {
         const bbox = [];
         const minY = boxes[i][0] * h;
         const minX = boxes[i][1] * w;
@@ -149,13 +155,13 @@ class Home extends Component {
     return detectionObjects;
   }
   renderPredictions = (scores, boxes, classes) => {
-    const img = this.refs.image;
+    const img = this.imageRef.current;
+
     img.src = this.state.previewImgUrl;
     if (this.state.haveResult) {
-      let ctx = this.refs.canvas.getContext("2d");
+      let ctx = this.resultCanvasRef.current.getContext("2d");
       ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
-      // Font options.
       const font = "14px sans-serif";
       ctx.font = font;
       ctx.textBaseline = "top";
@@ -179,7 +185,7 @@ class Home extends Component {
           const textWidth = ctx.measureText(
             item["label"] + " " + (100 * item["score"]).toFixed(2) + "%"
           ).width;
-          const textHeight = parseInt(font, 10); // base 10
+          const textHeight = parseInt(font, 10);
           ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
         });
 
@@ -217,13 +223,24 @@ class Home extends Component {
       img.height * ratio
     );
   };
-
+  onChangeIoU = (event) => {
+    let copyState = { ...this.state };
+    copyState.iou = event.target.value;
+    this.setState(
+      {
+        ...copyState,
+      },
+      () => {
+        console.log(copyState);
+      }
+    );
+  };
   render() {
     return (
       <>
         <Hero />
-        <div class="container-fluid home-content">
-          <div class="">
+        <div className="container-fluid home-content">
+          <div className="col-12">
             <h1 className="text-primary text-center my-5">
               White Blood Cells Detector
             </h1>
@@ -264,16 +281,59 @@ class Home extends Component {
                 More Details
               </button>
             </div>
-            <div className="col-12 d-flex mt-5 image-header">
+            <div className="text-center mb-4 col-12">
+              <h5 className="d-inline-block text-primary text-uppercase text-center  mb-4">
+                IoU
+              </h5>
+              <select
+                className="btn btn-outline px-3 mx-3 select"
+                onChange={(event) => {
+                  this.onChangeIoU(event);
+                }}
+                value={this.state.iou}
+              >
+                <option value={0.5} className="select-item">
+                  0.50
+                </option>
+                <option value={0.55} className="select-item">
+                  0.55
+                </option>
+                <option className="select-item" value={0.6}>
+                  0.60
+                </option>
+                <option className="select-item" value={0.65}>
+                  0.65
+                </option>
+                <option className="select-item" value={0.7}>
+                  0.70
+                </option>
+                <option className="select-item" value={0.75}>
+                  0.75
+                </option>
+                <option className="select-item" value={0.8} defaultValue>
+                  0.80
+                </option>
+                <option className="select-item" value={0.85}>
+                  0.85
+                </option>
+                <option className="select-item" value={0.9}>
+                  0.90
+                </option>
+                <option className="select-item" value={0.95}>
+                  0.95
+                </option>
+              </select>
+            </div>
+            <div className="col-12 d-flex mb-3 image-header">
               {" "}
               <div className="col-6">
                 {" "}
-                <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 mb-4 original-image-title">
+                <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 original-image-title">
                   Original Image
                 </h4>
               </div>
               <div className="col-6">
-                <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 mb-4 result-image-title">
+                <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 result-image-title">
                   Detection Result
                 </h4>
               </div>
@@ -282,7 +342,12 @@ class Home extends Component {
             <div className="">
               <div className="display-container col-12">
                 <div className="canvas1">
-                  <img ref="image" hidden src={this.state.previewImgUrl} />
+                  <img
+                    ref={this.imageRef}
+                    hidden
+                    src={this.state.previewImgUrl}
+                    alt=""
+                  />
                   <canvas
                     ref={this.canvasRef}
                     id="myCanvas1"
@@ -295,8 +360,8 @@ class Home extends Component {
                 </div>
                 <div className="loading-spinner my-3 col-1">
                   {this.state.isLoading && (
-                    <div class="spinner-border text-info" role="status">
-                      <span class="sr-only">Loading...</span>
+                    <div className="spinner-border text-info" role="status">
+                      <span className="sr-only">Loading...</span>
                     </div>
                   )}
                 </div>
@@ -305,7 +370,7 @@ class Home extends Component {
                     <div>
                       <canvas
                         className="rounded"
-                        ref="canvas"
+                        ref={this.resultCanvasRef}
                         id="myCanvas"
                         width="350"
                         height="350"
