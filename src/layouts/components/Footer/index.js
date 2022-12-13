@@ -50,9 +50,10 @@ class Footer extends Component {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <h6 className="text-primary text-uppercase mt-4 mb-3">
+                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
                   Follow Us
-                </h6>
+                </h4>
+
                 <div className="d-flex">
                   <Link
                     className="btn btn-lg btn-primary btn-lg-square rounded-circle me-2"
