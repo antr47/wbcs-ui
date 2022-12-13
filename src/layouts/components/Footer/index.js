@@ -50,19 +50,6 @@ class Footer extends Component {
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
-                <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                  Newsletter
-                </h4>
-                <form action="">
-                  <div className="input-group">
-                    <input
-                      type="text"
-                      className="form-control p-3 border-0"
-                      placeholder="Your Email Address"
-                    />
-                    <button className="btn btn-primary">Sign Up</button>
-                  </div>
-                </form>
                 <h6 className="text-primary text-uppercase mt-4 mb-3">
                   Follow Us
                 </h6>
