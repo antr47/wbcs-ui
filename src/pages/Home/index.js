@@ -278,7 +278,7 @@ class Home extends Component {
                 }
                 onClick={() => this.toggle()}
               >
-                More Details
+                See More
               </button>
             </div>
             <div className="text-center mb-4 col-12">
