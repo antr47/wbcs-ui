@@ -331,20 +331,22 @@ class Home extends Component {
                 </option>
               </select>
             </div>
-            <div className="col-12 d-flex mb-3 image-header">
-              {" "}
-              <div className="col-6">
+            {this.state.isSelectedImage && (
+              <div className="col-12 d-flex mb-3 image-header">
                 {" "}
-                <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 original-image-title">
-                  Original Image
-                </h4>
+                <div className="col-6">
+                  {" "}
+                  <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 original-image-title">
+                    Original Image
+                  </h4>
+                </div>
+                <div className="col-6">
+                  <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 result-image-title">
+                    Detection Result
+                  </h4>
+                </div>
               </div>
-              <div className="col-6">
-                <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 result-image-title">
-                  Detection Result
-                </h4>
-              </div>
-            </div>
+            )}
             <div
               className={
                 this.state.isSelectedImage === true
