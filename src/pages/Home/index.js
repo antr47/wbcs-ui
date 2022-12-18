@@ -32,10 +32,21 @@ class Home extends Component {
     });
   };
 
-  handleOnChangeImage = async (event) => {
+  handleOnChangeImage = (event) => {
     let data = event.target.files;
     let file = data[0];
+
     if (file) {
+      let copyState = { ...this.state };
+      copyState.isSelectedImage =
+        this.state.isSelectedImage === false
+          ? !this.state.isSelectedImage
+          : this.state.isSelectedImage;
+
+      copyState.haveResult = false;
+      copyState.result = {};
+      this.setState(copyState);
+
       let objectUrl = URL.createObjectURL(file);
       const img = new Image();
       img.src = objectUrl;
@@ -43,11 +54,6 @@ class Home extends Component {
       img.onload = () => {
         this.drawImageScaled(img, ctx);
       };
-      this.setState({
-        isSelectedImage: true,
-        haveResult: false,
-        result: {},
-      });
     }
   };
   toggle = () => {
@@ -250,6 +256,7 @@ class Home extends Component {
                 type="file"
                 className=""
                 hidden
+                accept=".jpg,.jpeg,.png"
                 onChange={(event) => this.handleOnChangeImage(event)}
               />
               <label
@@ -283,7 +290,7 @@ class Home extends Component {
             </div>
             <div className="text-center mb-4 col-12">
               <h5 className="d-inline-block text-primary text-uppercase text-center  mb-4">
-                IoU
+                Thresh
               </h5>
               <select
                 className="btn btn-outline px-3 mx-3 select"
@@ -338,52 +345,56 @@ class Home extends Component {
                 </h4>
               </div>
             </div>
+            <div
+              className={
+                this.state.isSelectedImage === true
+                  ? "display-container col-12"
+                  : "d-none"
+              }
+            >
+              <div className="canvas1">
+                <img
+                  ref={this.imageRef}
+                  hidden
+                  src={this.state.previewImgUrl}
+                  alt=""
+                />
 
-            <div className="">
-              <div className="display-container col-12">
-                <div className="canvas1">
-                  <img
-                    ref={this.imageRef}
-                    hidden
-                    src={this.state.previewImgUrl}
-                    alt=""
-                  />
-                  <canvas
-                    ref={this.canvasRef}
-                    id="myCanvas1"
-                    width="350"
-                    height="350"
-                    className="rounded"
-                  >
-                    Your browser does not support the HTML5 canvas tag.
-                  </canvas>
-                </div>
-                <div className="loading-spinner my-3 col-1">
-                  {this.state.isLoading && (
-                    <div className="spinner-border text-info" role="status">
-                      <span className="sr-only">Loading...</span>
-                    </div>
-                  )}
-                </div>
-                <div className="canvas">
-                  {this.state.haveResult && (
-                    <div>
-                      <canvas
-                        className="rounded"
-                        ref={this.resultCanvasRef}
-                        id="myCanvas"
-                        width="350"
-                        height="350"
-                      >
-                        Your browser does not support the HTML5 canvas tag.
-                      </canvas>
-                    </div>
-                  )}
-                </div>
+                <canvas
+                  ref={this.canvasRef}
+                  id="myCanvas1"
+                  width="350"
+                  height="350"
+                  className="rounded"
+                ></canvas>
+              </div>
+
+              <div className="loading-spinner my-3 col-1">
+                {this.state.isLoading && (
+                  <div className="spinner-border text-info" role="status">
+                    <span className="sr-only">Loading...</span>
+                  </div>
+                )}
+              </div>
+              <div className="canvas">
+                {this.state.haveResult && (
+                  <div>
+                    <canvas
+                      className="rounded"
+                      ref={this.resultCanvasRef}
+                      id="myCanvas"
+                      width="350"
+                      height="350"
+                    >
+                      Your browser does not support the HTML5 canvas tag.
+                    </canvas>
+                  </div>
+                )}
               </div>
             </div>
           </div>
         </div>
+
         {this.state.isShowModal && (
           <ModalExample
             isShowModal={this.state.isShowModal}

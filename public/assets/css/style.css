@@ -268,9 +268,12 @@
 }
 /*---------------------CUSTOM---------------------------*/
 .display-container{
+    height: auto;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+  
 }
 .detect-button{
     min-width: 194px;
