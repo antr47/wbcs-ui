@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
 class Contact extends Component {
   constructor(props) {
     super(props);
@@ -20,9 +22,12 @@ class Contact extends Component {
             style={{ maxWidth: "500px" }}
           >
             <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">
-              Any Questions?
+              <FormattedMessage id="contact.title" />
             </h5>
-            <h1 className="display-4 mt-5">Please Feel Free To Contact Us</h1>
+            <h1 className="display-4 mt-5">
+              {" "}
+              <FormattedMessage id="contact.content" />
+            </h1>
           </div>
           <div className="row g-5 mb-5">
             <div className="col-lg-4">
@@ -44,7 +49,7 @@ class Contact extends Component {
                   ></i>
                 </div>
                 <h6 className="mb-0">
-                  140 Le Trong Tan, Tay Thanh, Tan Phu, HCMC
+                  <FormattedMessage id="contact.address" />
                 </h6>
               </div>
             </div>
@@ -96,4 +101,13 @@ class Contact extends Component {
     );
   }
 }
-export default Contact;
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Contact);

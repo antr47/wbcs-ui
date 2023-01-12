@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Trang Chủ",
+    "about": "Giới Thiệu",
+    "contact": "Liên Hệ"
+  },
+
+  "hero": {
+    "welcome": "Chào Mừng Đến Với MEDIHUFI",
+    "content": "Giải Pháp Chăm Sóc Sức Khỏe Cho Bạn"
+  },
+  "home": {
+    "title": "Phát Hiện Tế Bào Máu Trắng",
+    "select": "Chọn Ảnh",
+    "detect": "Gửi",
+    "more": "Xem Thêm",
+    "thresh": "Ngưỡng",
+    "original-image": "Ảnh gốc",
+    "detection-result": "Kết Quả Phát Hiện"
+  },
+  "message": {
+    "detection-message": "Thông Tin Phát Hiện"
+  },
+  "about": {
+    "title": "Về Chúng Tôi",
+    "content": "Dịch Vụ Chăm Sóc Sức Khỏe Tốt Nhất Cho Bạn Và Gia Đình",
+    "qualified": "Chất Lượng",
+    "doctors": "Bác Sỹ",
+    "emergency": "Khẩn Cấp",
+    "services": "Dịch Vụ",
+    "accurate": "Chính Xác",
+    "testing": "Kiểm Tra",
+    "ambulance": "Cấp Cứu",
+    "free": "Miễn Phí"
+  },
+  "contact": {
+    "title": "Bạn Có Thắc Mắc?",
+    "content": "Liên Hệ Chúng Tôi Miễn Phí",
+    "address": "140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, TP. Hồ Chí  Minh"
+  },
+  "footer": {
+    "getintouch": "Thông Tin Liên Hệ",
+    "address": "140 Lê Trọng Tấn, Phường Tây Thạnh, Quận Tân Phú, TP. Hồ Chí  Minh",
+    "popular": "Liên Kết Phổ biến",
+    "home": "Trang Chủ Của Chúng Tôi",
+    "about": "Về Chúng Tôi",
+    "contact": "Liên Hệ Chúng Tôi",
+    "follow": "Theo Dõi Chúng tôi"
+  }
+}

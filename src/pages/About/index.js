@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
 class About extends Component {
   constructor(props) {
     super(props);
@@ -28,10 +30,10 @@ class About extends Component {
             <div class="col-lg-7">
               <div class="mb-4">
                 <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">
-                  About Us
+                  <FormattedMessage id="about.title" />
                 </h5>
                 <h1 class="display-4">
-                  Best Medical Care For Yourself and Your Family
+                  <FormattedMessage id="about.content" />
                 </h1>
               </div>
 
@@ -40,8 +42,12 @@ class About extends Component {
                   <div class="bg-light text-center rounded-circle py-4">
                     <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
                     <h6 class="mb-0">
-                      Qualified
-                      <small class="d-block text-primary">Doctors</small>
+                      <FormattedMessage id="about.doctors" />
+
+                      <small class="d-block text-primary">
+                        {" "}
+                        <FormattedMessage id="about.qualified" />
+                      </small>
                     </h6>
                   </div>
                 </div>
@@ -49,8 +55,11 @@ class About extends Component {
                   <div class="bg-light text-center rounded-circle py-4">
                     <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
                     <h6 class="mb-0">
-                      Emergency
-                      <small class="d-block text-primary">Services</small>
+                      <FormattedMessage id="about.services" />
+
+                      <small class="d-block text-primary">
+                        <FormattedMessage id="about.emergency" />
+                      </small>
                     </h6>
                   </div>
                 </div>
@@ -58,8 +67,11 @@ class About extends Component {
                   <div class="bg-light text-center rounded-circle py-4">
                     <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
                     <h6 class="mb-0">
-                      Accurate
-                      <small class="d-block text-primary">Testing</small>
+                      <FormattedMessage id="about.testing" />
+
+                      <small class="d-block text-primary">
+                        <FormattedMessage id="about.accurate" />
+                      </small>
                     </h6>
                   </div>
                 </div>
@@ -67,7 +79,11 @@ class About extends Component {
                   <div class="bg-light text-center rounded-circle py-4">
                     <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
                     <h6 class="mb-0">
-                      Free<small class="d-block text-primary">Ambulance</small>
+                      <FormattedMessage id="about.ambulance" />
+                      <small class="d-block text-primary">
+                        {" "}
+                        <FormattedMessage id="about.free" />
+                      </small>
                     </h6>
                   </div>
                 </div>
@@ -79,4 +95,13 @@ class About extends Component {
     );
   }
 }
-export default About;
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(About);

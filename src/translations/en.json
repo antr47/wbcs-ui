@@ -1,0 +1,50 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "welcome": "WELCOME TO MEDIHUFI",
+    "content": "Best Healthcare Solution For You"
+  },
+  "home": {
+    "title": "White Blood Cells Detector",
+    "select": "Select Image",
+    "detect": "Detect",
+    "more": "See More",
+    "thresh": "Thresh",
+    "original-image": "Original Image",
+    "detection-result": "Detection Result"
+  },
+  "message": {
+    "detection-message": "Detection Message"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Best Medical Care For Yourself and Your Family",
+    "qualified": "Qualified",
+    "doctors": "Doctors",
+    "emergency": "Emergency",
+    "services": "Services",
+    "accurate": "Accurate",
+    "ambulance": "Ambulance",
+    "testing": "Testing",
+ 
+    "free": "Free"
+  },
+  "contact": {
+    "title": "ANY QUESTIONS?",
+    "content": "Please Feel Free To Contact Us",
+    "address": "140 Le Trong Tan, Tay Thanh, Tan Phu, HCMC"
+  },
+  "footer": {
+    "getintouch": "Get In Touch",
+    "address": "140 Le Trong Tan, Tay Thanh, Tan Phu, HCMC",
+    "popular": "Popular Link",
+    "home": "Home",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "follow": "Follow Us"
+  }
+}

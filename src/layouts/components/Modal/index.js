@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
-
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
 class ModalExample extends React.Component {
   constructor(props) {
     super(props);
@@ -26,7 +27,7 @@ class ModalExample extends React.Component {
           className={this.props.className}
         >
           <ModalHeader toggle={this.props.toggle}>
-            Detection Message
+            <FormattedMessage id="message.detection-message" />
           </ModalHeader>
           <ModalBody>
             {Object.entries(this.props.result).length === 1 ? (
@@ -61,5 +62,13 @@ class ModalExample extends React.Component {
     );
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+  };
+};
 
-export default ModalExample;
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ModalExample);

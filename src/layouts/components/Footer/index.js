@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
 class Footer extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +18,12 @@ class Footer extends Component {
             <div className="row g-5 d-flex justify-content-between">
               <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                  Get In Touch
+                  <FormattedMessage id="footer.getintouch" />
                 </h4>
 
                 <p className="mb-2">
-                  <i className="fa fa-map-marker-alt text-primary me-3"></i>140
-                  Le Trong Tan, Tay Thanh, Tan Phu, HCMC
+                  <i className="fa fa-map-marker-alt text-primary me-3"></i>
+                  <FormattedMessage id="footer.address" />
                 </p>
                 <p className="mb-2">
                   <i className="fa fa-envelope text-primary me-3"></i>
@@ -35,23 +37,26 @@ class Footer extends Component {
 
               <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                  Popular Links
+                  <FormattedMessage id="footer.popular" />
                 </h4>
                 <div className="d-flex flex-column justify-content-start">
                   <Link className="text-light mb-2" to="/">
-                    <i className="fa fa-angle-right me-2"></i>Home
+                    <i className="fa fa-angle-right me-2"></i>
+                    <FormattedMessage id="footer.home" />
                   </Link>
                   <Link className="text-light mb-2" to="/about">
-                    <i className="fa fa-angle-right me-2"></i>About Us
+                    <i className="fa fa-angle-right me-2"></i>
+                    <FormattedMessage id="footer.about" />
                   </Link>
                   <Link className="text-light" to="/contact">
-                    <i className="fa fa-angle-right me-2"></i>Contact Us
+                    <i className="fa fa-angle-right me-2"></i>
+                    <FormattedMessage id="footer.contact" />
                   </Link>
                 </div>
               </div>
               <div className="col-lg-3 col-md-6">
                 <h4 className="d-inline-block text-primary text-uppercase border-bottom border-5 border-secondary mb-4">
-                  Follow Us
+                  <FormattedMessage id="footer.follow" />
                 </h4>
 
                 <div className="d-flex">
@@ -87,7 +92,7 @@ class Footer extends Component {
                 <p className="mb-0">
                   Designed by{" "}
                   <Link className="text-primary" to="">
-                    MEDINOVA Group
+                    MEDIHUFI Group
                   </Link>
                 </p>
               </div>
@@ -98,4 +103,13 @@ class Footer extends Component {
     );
   }
 }
-export default Footer;
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Footer);

@@ -55,6 +55,9 @@
 .nav{
     z-index: 1000;
 }
+.navbar-nav{
+        margin-right: 25px;
+    }
 .home-content{
     width: 100%;
     height: auto;
@@ -326,3 +329,14 @@ align-items: center;
 .select-item{
     text-align: left;
 }
+  .header-language,
+    .header-language {
+        margin: 0 4px;
+      opacity: 0.5;
+      cursor: pointer;
+    
+    }
+    .lang-action {
+        opacity: 1;
+        color: var(--primary);
+      }

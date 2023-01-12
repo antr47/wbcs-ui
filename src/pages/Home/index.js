@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
 import { handleSendData } from "../../services/Service";
 import ModalExample from "../../layouts/components/Modal";
 import Hero from "../../layouts/components/Hero";
@@ -248,7 +250,7 @@ class Home extends Component {
         <div className="container-fluid home-content">
           <div className="col-12">
             <h1 className="text-primary text-center my-5">
-              White Blood Cells Detector
+              <FormattedMessage id="home.title" />
             </h1>
             <div className="text-center mb-4">
               <input
@@ -263,7 +265,7 @@ class Home extends Component {
                 htmlFor="loadImg"
                 className="btn btn-outline-primary rounded-pill py-3 my-2 px-5"
               >
-                Select Image
+                <FormattedMessage id="home.select" />
               </label>
 
               <button
@@ -274,7 +276,7 @@ class Home extends Component {
                 }
                 onClick={() => this.sendData()}
               >
-                Detect
+                <FormattedMessage id="home.detect" />
               </button>
               <button
                 className={
@@ -285,12 +287,12 @@ class Home extends Component {
                 }
                 onClick={() => this.toggle()}
               >
-                See More
+                <FormattedMessage id="home.more" />
               </button>
             </div>
             <div className="text-center mb-4 col-12">
               <h5 className="d-inline-block text-primary text-uppercase text-center  mb-4">
-                Thresh
+                <FormattedMessage id="home.thresh" />
               </h5>
               <select
                 className="btn btn-outline px-3 mx-3 select"
@@ -337,12 +339,12 @@ class Home extends Component {
                 <div className="col-6">
                   {" "}
                   <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 original-image-title">
-                    Original Image
+                    <FormattedMessage id="home.original-image" />
                   </h4>
                 </div>
                 <div className="col-6">
                   <h4 className="d-inline-block text-primary text-uppercase text-center border-bottom border-5 result-image-title">
-                    Detection Result
+                    <FormattedMessage id="home.detection-result" />
                   </h4>
                 </div>
               </div>
@@ -408,4 +410,13 @@ class Home extends Component {
     );
   }
 }
-export default Home;
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

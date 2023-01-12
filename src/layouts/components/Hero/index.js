@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
+import { FormattedMessage } from "react-intl";
 class Hero extends Component {
   constructor(props) {
     super(props);
@@ -16,13 +17,11 @@ class Hero extends Component {
         <div className="container py-5">
           <div className="row justify-content-start">
             <div className="col-lg-8 text-center text-lg-start">
-              <h5
-                className="d-inline-block text-primary text-uppercase border-bottom border-5"
-              >
-                Welcome To Medinova
+              <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">
+                <FormattedMessage id="hero.welcome" />
               </h5>
               <h1 className="display-1 text-white mb-md-4">
-                Best Healthcare Solution For You
+                <FormattedMessage id="hero.content" />
               </h1>
             </div>
           </div>
@@ -31,4 +30,13 @@ class Hero extends Component {
     );
   }
 }
-export default Hero;
+const mapStateToProps = (state) => {
+  return {
+    language: state.language,
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {};
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Hero);
