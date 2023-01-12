@@ -121,7 +121,9 @@
 }
 
 .hero-header {
-    background: url(../img/hero.jpg) top right no-repeat;
+    background: url(../img/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
 }
 
@@ -317,7 +319,9 @@ justify-content: center;
 align-items: center;
 }
 .fit-cover{
-    background: url(../img/about.jpg) top right no-repeat;
+    background: url(../img/about.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
     background-size: cover;
 }
 .w-h-60{
