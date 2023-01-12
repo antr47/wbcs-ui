@@ -15,11 +15,11 @@ class About extends Component {
 
   render() {
     return (
-      <div class="container-fluid py-5 mt-5">
-        <div class="container">
-          <div class="row gx-5">
-            <div class="col-lg-5 mb-5 mb-lg-0">
-              <div class="position-relative h-100">
+      <div className="container-fluid py-5 mt-5">
+        <div className="container">
+          <div className="row gx-5">
+            <div className="col-lg-5 mb-5 mb-lg-0">
+              <div className="position-relative h-100">
                 <img
                   className="position-absolute w-100 h-100 rounded fit-cover"
                   src="assets/img/about.jpg"
@@ -27,60 +27,60 @@ class About extends Component {
                 />
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="mb-4">
-                <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">
+            <div className="col-lg-7">
+              <div className="mb-4">
+                <h5 className="d-inline-block text-primary text-uppercase border-bottom border-5">
                   <FormattedMessage id="about.title" />
                 </h5>
-                <h1 class="display-4">
+                <h1 className="display-4">
                   <FormattedMessage id="about.content" />
                 </h1>
               </div>
 
-              <div class="row g-3 pt-3">
-                <div class="col-sm-3 col-6">
-                  <div class="bg-light text-center rounded-circle py-4">
-                    <i class="fa fa-3x fa-user-md text-primary mb-3"></i>
-                    <h6 class="mb-0">
+              <div className="row g-3 pt-3">
+                <div className="col-sm-3 col-6">
+                  <div className="bg-light text-center rounded-circle py-4">
+                    <i className="fa fa-3x fa-user-md text-primary mb-3"></i>
+                    <h6 className="mb-0">
                       <FormattedMessage id="about.doctors" />
 
-                      <small class="d-block text-primary">
+                      <small className="d-block text-primary">
                         {" "}
                         <FormattedMessage id="about.qualified" />
                       </small>
                     </h6>
                   </div>
                 </div>
-                <div class="col-sm-3 col-6">
-                  <div class="bg-light text-center rounded-circle py-4">
-                    <i class="fa fa-3x fa-procedures text-primary mb-3"></i>
-                    <h6 class="mb-0">
+                <div className="col-sm-3 col-6">
+                  <div className="bg-light text-center rounded-circle py-4">
+                    <i className="fa fa-3x fa-procedures text-primary mb-3"></i>
+                    <h6 className="mb-0">
                       <FormattedMessage id="about.services" />
 
-                      <small class="d-block text-primary">
+                      <small className="d-block text-primary">
                         <FormattedMessage id="about.emergency" />
                       </small>
                     </h6>
                   </div>
                 </div>
-                <div class="col-sm-3 col-6">
-                  <div class="bg-light text-center rounded-circle py-4">
-                    <i class="fa fa-3x fa-microscope text-primary mb-3"></i>
-                    <h6 class="mb-0">
+                <div className="col-sm-3 col-6">
+                  <div className="bg-light text-center rounded-circle py-4">
+                    <i className="fa fa-3x fa-microscope text-primary mb-3"></i>
+                    <h6 className="mb-0">
                       <FormattedMessage id="about.testing" />
 
-                      <small class="d-block text-primary">
+                      <small className="d-block text-primary">
                         <FormattedMessage id="about.accurate" />
                       </small>
                     </h6>
                   </div>
                 </div>
-                <div class="col-sm-3 col-6">
-                  <div class="bg-light text-center rounded-circle py-4">
-                    <i class="fa fa-3x fa-ambulance text-primary mb-3"></i>
-                    <h6 class="mb-0">
+                <div className="col-sm-3 col-6">
+                  <div className="bg-light text-center rounded-circle py-4">
+                    <i className="fa fa-3x fa-ambulance text-primary mb-3"></i>
+                    <h6 className="mb-0">
                       <FormattedMessage id="about.ambulance" />
-                      <small class="d-block text-primary">
+                      <small className="d-block text-primary">
                         {" "}
                         <FormattedMessage id="about.free" />
                       </small>
