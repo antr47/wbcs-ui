@@ -20,11 +20,7 @@ class About extends Component {
           <div className="row gx-5">
             <div className="col-lg-5 mb-5 mb-lg-0">
               <div className="position-relative h-100">
-                <img
-                  className="position-absolute w-100 h-100 rounded fit-cover"
-                  src="assets/img/about.jpg"
-                  alt=""
-                />
+                <div className="position-absolute w-100 h-100 rounded fit-cover"></div>
               </div>
             </div>
             <div className="col-lg-7">
