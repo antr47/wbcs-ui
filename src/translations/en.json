@@ -13,7 +13,7 @@
     "select": "Select Image",
     "detect": "Detect",
     "more": "See More",
-    "thresh": "Thresh",
+    "thresh": "Threshold",
     "original-image": "Original Image",
     "detection-result": "Detection Result"
   },
@@ -30,7 +30,7 @@
     "accurate": "Accurate",
     "ambulance": "Ambulance",
     "testing": "Testing",
- 
+
     "free": "Free"
   },
   "contact": {
